@@ -1,4 +1,5 @@
 class VideosController < ApplicationController
+  before_action :signed_in_user
   before_action :set_video, only: [:show, :edit, :update, :destroy]
 
   # GET /videos
@@ -25,6 +26,7 @@ class VideosController < ApplicationController
   # POST /videos.json
   def create
     @video = Video.new(video_params)
+    # @video.user = current_user
 
     respond_to do |format|
       if @video.save

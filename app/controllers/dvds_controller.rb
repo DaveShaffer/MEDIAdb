@@ -1,10 +1,11 @@
 class DvdsController < ApplicationController
+  before_action :signed_in_user
   before_action :set_dvd, only: [:show, :edit, :update, :destroy]
 
   # GET /dvds
   # GET /dvds.json
   def index
-    @dvds = Dvd.all
+    @dvds = current_user.dvds.all
   end
 
   # GET /dvds/1
@@ -25,6 +26,7 @@ class DvdsController < ApplicationController
   # POST /dvds.json
   def create
     @dvd = Dvd.new(dvd_params)
+    @dvd.user = current_user
 
     respond_to do |format|
       if @dvd.save
