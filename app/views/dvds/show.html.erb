@@ -1,9 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>DVD ID:</strong>
+  <%= @dvd.id %>
+</p>
+
+<p>
   <strong>Format:</strong>
   <%= @dvd.format %>
 </p>
 
+<p>
+  <strong>Belongs to:</strong>
+  <%= User.find(@dvd.user_id).name %>
+</p>
+
+<p>
+  <strong>User ID:</strong>
+  <%= @dvd.user_id %>
+</p>
+
 <%= link_to 'Edit', edit_dvd_path(@dvd) %> |
 <%= link_to 'Back', dvds_path %>
+
+
+

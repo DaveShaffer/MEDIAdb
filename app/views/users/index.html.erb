@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>User ID</th>
       <th>Name</th>
       <th>Email</th>
  <!--      <th>Password digest</th>
@@ -16,9 +17,10 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
+        <td><%= user.id %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
-<!--         <td><%= user.password_digest %></td>
+<!--    <td><%= user.password_digest %></td>
         <td><%= user.remember_token %></td> -->
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
@@ -30,4 +32,5 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<!-- <%= link_to 'New User', new_user_path %> -->
+<!-- Sign Up/Sign In/Sign Out -->
