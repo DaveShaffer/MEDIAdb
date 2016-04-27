@@ -6,6 +6,7 @@ class VideosController < ApplicationController
   # GET /videos.json
   def index
     @videos = Video.all
+    # @videos = current_dvd.videos.all
   end
 
   # GET /videos/1
@@ -26,11 +27,11 @@ class VideosController < ApplicationController
   # POST /videos.json
   def create
     @video = Video.new(video_params)
-    # @video.user = current_user
+    # @video.dvd = current_dvd
 
     respond_to do |format|
       if @video.save
-        format.html { redirect_to videos_path, notice: 'Video was successfully created.' }
+        format.html { redirect_to videos_path, notice: 'File was successfully created.' }
         format.json { render :show, status: :created, location: @video }
       else
         format.html { render :new }
@@ -44,7 +45,7 @@ class VideosController < ApplicationController
   def update
     respond_to do |format|
       if @video.update(video_params)
-        format.html { redirect_to videos_path, notice: 'Video was successfully updated.' }
+        format.html { redirect_to videos_path, notice: 'File was successfully updated.' }
         format.json { render :show, status: :ok, location: @video }
       else
         format.html { render :edit }
@@ -58,7 +59,7 @@ class VideosController < ApplicationController
   def destroy
     @video.destroy
     respond_to do |format|
-      format.html { redirect_to videos_path, notice: 'Video was successfully destroyed.' }
+      format.html { redirect_to videos_path, notice: 'File was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

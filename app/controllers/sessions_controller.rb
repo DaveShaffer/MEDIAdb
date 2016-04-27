@@ -9,8 +9,12 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_back_or dvds_path
     else
-      flash.now[:error] = 'Invalid email/password combination'
-      render 'new'
+    # respond_to do |format|
+      # format.html { notice: 'Invalid email/password combination' }
+      # format.json { head :no_content }
+    # end
+    flash.now[:error] = 'Invalid email/password combination'
+    render 'new'
     end
   end
 
