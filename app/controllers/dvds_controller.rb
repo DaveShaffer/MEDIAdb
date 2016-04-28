@@ -1,6 +1,7 @@
 class DvdsController < ApplicationController
   before_action :signed_in_user
   before_action :set_dvd, only: [:show, :edit, :update, :destroy]
+  before_action :verify_correct_user, only: [:show, :edit, :update, :destroy]
 
   # GET /dvds
   # GET /dvds.json
@@ -64,6 +65,11 @@ class DvdsController < ApplicationController
   end
 
   private
+     def verify_correct_user
+       @dvd = current_user.dvds.find_by(id: params[:id])
+       redirect_to root_url, notice: 'Access Denied!' if @dvd.nil?
+     end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_dvd
       @dvd = Dvd.find(params[:id])

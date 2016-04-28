@@ -1,6 +1,7 @@
 class VideosController < ApplicationController
   before_action :signed_in_user
   before_action :set_video, only: [:show, :edit, :update, :destroy]
+  # before_action :verify_correct_user, only: [:show, :edit, :update, :destroy]
 
   # GET /videos
   # GET /videos.json
