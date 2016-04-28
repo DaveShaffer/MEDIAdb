@@ -12,13 +12,13 @@
   </thead>
 
   <tbody>
-    <% @videos.each do |video| %>
+    <% @dvd.videos.each do |video| %>
       <tr>
         <td><%= video.title %></td>
         <td><%= video.dvd_id %></td>
-        <td><%= link_to 'Show', video %></td>
-        <td><%= link_to 'Edit', edit_video_path(video) %></td>
-        <td><%= link_to 'Destroy', video, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', dvd_video_path(@dvd, video) %></td>
+        <td><%= link_to 'Edit', edit_dvd_video_path(@dvd, video) %></td>
+        <td><%= link_to 'Destroy', dvd_video_path(@dvd, video), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,7 +26,5 @@
 
 <br>
 
-<!-- <%= link_to 'New Video', new_video_path %> -->
-<%= link_to 'Add New File', new_video_path(@dvd) %><br>
-<%= link_to 'Show All Users', users_path %><br>
-<%= link_to 'Show All Media', dvds_path %>
+<%= link_to 'Show All Media', dvds_path %><br>
+<%= link_to 'Add New File', new_dvd_video_path(@dvd) %><br>

@@ -5,6 +5,7 @@ class VideosController < ApplicationController
   # GET /videos
   # GET /videos.json
   def index
+    @dvd = Dvd.find(params[:dvd_id])
     @videos = Video.all
     # @videos = current_dvd.videos.all
   end
@@ -12,26 +13,31 @@ class VideosController < ApplicationController
   # GET /videos/1
   # GET /videos/1.json
   def show
+    @dvd = Dvd.find(params[:dvd_id])
   end
 
   # GET /videos/new
   def new
+    @dvd = Dvd.find(params[:dvd_id])
     @video = Video.new
+
   end
 
   # GET /videos/1/edit
   def edit
+      @dvd = Dvd.find(params[:dvd_id])
   end
 
   # POST /videos
   # POST /videos.json
   def create
-    @video = Video.new(video_params)
-    # @video.dvd = current_dvd
+    @dvd = Dvd.find(params[:dvd_id])
+    @video = @dvd.videos.new(video_params)
+    #@video = Video.new(video_params)
 
     respond_to do |format|
       if @video.save
-        format.html { redirect_to videos_path, notice: 'File was successfully created.' }
+        format.html { redirect_to dvd_videos_path, notice: 'File was successfully created.' }
         format.json { render :show, status: :created, location: @video }
       else
         format.html { render :new }
@@ -45,7 +51,7 @@ class VideosController < ApplicationController
   def update
     respond_to do |format|
       if @video.update(video_params)
-        format.html { redirect_to videos_path, notice: 'File was successfully updated.' }
+        format.html { redirect_to dvd_videos_path, notice: 'File was successfully updated.' }
         format.json { render :show, status: :ok, location: @video }
       else
         format.html { render :edit }
@@ -59,7 +65,7 @@ class VideosController < ApplicationController
   def destroy
     @video.destroy
     respond_to do |format|
-      format.html { redirect_to videos_path, notice: 'File was successfully destroyed.' }
+      format.html { redirect_to dvd_videos_path, notice: 'File was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
