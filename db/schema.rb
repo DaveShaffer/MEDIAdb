@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20160426171359) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
-  end # End create_table do
+  end
 
   add_index "dvds", ["user_id"], name: "index_dvds_on_user_id", using: :btree
 
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20160426171359) do
     t.string   "remember_token"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-  end # End create_table do
+  end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
@@ -41,10 +41,10 @@ ActiveRecord::Schema.define(version: 20160426171359) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "dvd_id"
-  end # End create_table do
+  end
 
   add_index "videos", ["dvd_id"], name: "index_videos_on_dvd_id", using: :btree
 
   add_foreign_key "dvds", "users"
   add_foreign_key "videos", "dvds"
-end # End ActiveRecord do
+end
