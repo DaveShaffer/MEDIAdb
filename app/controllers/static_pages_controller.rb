@@ -1,8 +1,8 @@
 class StaticPagesController < ApplicationController
   def home
     redirect_to dvds_path if signed_in?
-  end
+  end # End def home
 
   def about
-  end
-end
+  end # End def about
+end # End Class StaticPagesController

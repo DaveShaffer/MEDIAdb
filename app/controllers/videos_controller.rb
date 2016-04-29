@@ -9,32 +9,30 @@ class VideosController < ApplicationController
     @dvd = Dvd.find(params[:dvd_id])
     @videos = Video.all
     # @videos = current_dvd.videos.all
-  end
+  end # End def index
 
   # GET /videos/1
   # GET /videos/1.json
   def show
     @dvd = Dvd.find(params[:dvd_id])
-  end
+  end # End def show
 
   # GET /videos/new
   def new
     @dvd = Dvd.find(params[:dvd_id])
     @video = Video.new
-
-  end
+  end # End def new
 
   # GET /videos/1/edit
   def edit
       @dvd = Dvd.find(params[:dvd_id])
-  end
+  end # End def edit
 
   # POST /videos
   # POST /videos.json
   def create
     @dvd = Dvd.find(params[:dvd_id])
     @video = @dvd.videos.new(video_params)
-    #@video = Video.new(video_params)
 
     respond_to do |format|
       if @video.save
@@ -43,9 +41,9 @@ class VideosController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @video.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+      end # End if @video.save
+    end # End respond_to do
+  end # End def create
 
   # PATCH/PUT /videos/1
   # PATCH/PUT /videos/1.json
@@ -57,9 +55,9 @@ class VideosController < ApplicationController
       else
         format.html { render :edit }
         format.json { render json: @video.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+      end # End if @video.update
+    end # End respond_to do
+  end # End def update
 
   # DELETE /videos/1
   # DELETE /videos/1.json
@@ -68,17 +66,17 @@ class VideosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to dvd_videos_path, notice: 'File was successfully destroyed.' }
       format.json { head :no_content }
-    end
-  end
+    end # End respond_to do
+  end # End def destroy
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_video
       @video = Video.find(params[:id])
-    end
+    end # End def set_video
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_params
       params.require(:video).permit(:title)
-    end
-end
+    end # End def video_params
+end # End Class VideosController

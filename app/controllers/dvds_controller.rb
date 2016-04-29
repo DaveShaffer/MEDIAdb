@@ -1,4 +1,5 @@
 class DvdsController < ApplicationController
+  # Login Security
   before_action :signed_in_user
   before_action :set_dvd, only: [:show, :edit, :update, :destroy]
   before_action :verify_correct_user, only: [:show, :edit, :update, :destroy]
@@ -7,21 +8,21 @@ class DvdsController < ApplicationController
   # GET /dvds.json
   def index
     @dvds = current_user.dvds.all
-  end
+  end #End def index
 
   # GET /dvds/1
   # GET /dvds/1.json
   def show
-  end
+  end #End def show
 
   # GET /dvds/new
   def new
     @dvd = Dvd.new
-  end
+  end # End def new
 
   # GET /dvds/1/edit
   def edit
-  end
+  end # End def edit
 
   # POST /dvds
   # POST /dvds.json
@@ -36,9 +37,9 @@ class DvdsController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @dvd.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+      end # End if @dvd.save
+    end # End respond_to do
+  end # End def create
 
   # PATCH/PUT /dvds/1
   # PATCH/PUT /dvds/1.json
@@ -50,9 +51,9 @@ class DvdsController < ApplicationController
       else
         format.html { render :edit }
         format.json { render json: @dvd.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+      end # End if @dvd.update
+    end # End respond_to do
+  end # End def update
 
   # DELETE /dvds/1
   # DELETE /dvds/1.json
@@ -61,22 +62,22 @@ class DvdsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to dvds_path, notice: 'Medium was successfully destroyed.' }
       format.json { head :no_content }
-    end
-  end
+    end # End respond_to do
+  end # End def destroy
 
   private
      def verify_correct_user
        @dvd = current_user.dvds.find_by(id: params[:id])
        redirect_to root_url, notice: 'Access Denied!' if @dvd.nil?
-     end
+     end # End def verify_correct_user
 
     # Use callbacks to share common setup or constraints between actions.
     def set_dvd
       @dvd = Dvd.find(params[:id])
-    end
+    end # End set_dvd
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dvd_params
       params.require(:dvd).permit(:format)
-    end
-end
+    end # End def dvd_params
+end # End Class DvdsController

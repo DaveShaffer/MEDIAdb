@@ -4,12 +4,13 @@
       <h2><%= pluralize(@dvd.errors.count, "error") %> prohibited this dvd from being saved:</h2>
 
       <ul>
-      <% @dvd.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% @dvd.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end # End messages.each do %>
       </ul>
+
     </div>
-  <% end %>
+  <% end # End if @dvd.errors %>
 
   <div class="field">
     <%= f.label :format %><br>
@@ -19,4 +20,4 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+<% end # End form_for do %>

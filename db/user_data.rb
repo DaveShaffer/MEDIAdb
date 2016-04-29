@@ -5,3 +5,5 @@ def get_user_data
     {name: "Jerry Finney, Jr.",
     email: "jersy@there.com"}
   }
+  return user_data
+end # End def get_user_data

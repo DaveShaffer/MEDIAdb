@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
+
 <h1>User Details</h1>
+
 <p>
   <strong>User ID:</strong>
   <%= @user.id %>
@@ -14,16 +16,6 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
-
-<!-- <p>
-  <strong>Password digest:</strong>
-  <%= @user.password_digest %>
-</p>
-
-<p>
-  <strong>Remember token:</strong>
-  <%= @user.remember_token %>
-</p> -->
 
 <%= link_to 'Add New Media', new_dvd_path %><br>
 <%= link_to 'Edit User', edit_user_path(@user) %><br>

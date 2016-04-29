@@ -5,9 +5,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email, null: false
       t.string :password_digest, null: false
       t.string :remember_token
-
       t.timestamps null: false
-    end
+    end # End create_table do
     add_index :users, :email, unique: true
-  end
-end
+  end # End def change
+end # End Class CreateUsers

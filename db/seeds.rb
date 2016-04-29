@@ -29,5 +29,5 @@ video_data.each_pair do |dvd_format, videos|
       title:      video[:title],
       dvd_id:     video[:dvd_id]
       })
-  end
-end
+  end # End videos.each do
+end # End video_data.each do
