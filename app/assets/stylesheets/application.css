@@ -18,6 +18,7 @@
    max-width: 50em;
    margin:auto;
    padding:2em 1em;
+   background: url (./app/assets/images/paper017.jpg);
  }
 
  nav a {

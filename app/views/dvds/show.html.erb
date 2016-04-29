@@ -22,7 +22,7 @@
   <%= @dvd.user_id %>
 </p>
 
-<%= link_to 'Add New File', new_dvd_video_path(@dvd) %><br>
-<%= link_to 'Show All Files', dvd_videos_path(@dvd) %><br>
-<%= link_to 'Edit Medium', edit_dvd_path(@dvd) %><br>
-<%= link_to 'Show All Media', dvds_path %>
+<button type="button"><%= link_to 'Add New File', new_dvd_video_path(@dvd) %></button><br>
+<button type="button"><%= link_to 'Show All Files', dvd_videos_path(@dvd) %></button><br>
+<button type="button"><%= link_to 'Edit Medium', edit_dvd_path(@dvd) %></button><br>
+<button type="button"><%= link_to 'Show All Media', dvds_path %></button>
