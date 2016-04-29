@@ -48,9 +48,9 @@ Heroku repo is: https://github.com/DaveShaffer/MEDIAdb
 The link to Trello: https://trello.com/b/x46hY0We/mediadb-ga-wdi-proj-2
 
 ### Wireframe
-![#db wireframe1][https://github.com/DaveShaffer/MEDIAdb/blob/master/app/assets/images/20160429_1047002.jpg]
+![#db wireframe1](https://github.com/DaveShaffer/MEDIAdb/blob/master/app/assets/images/20160429_1047002.jpg)
 
-![#db wireframe2][https://github.com/DaveShaffer/MEDIAdb/blob/master/app/assets/images/20160429_110230.jpg]
+![#db wireframe2](https://github.com/DaveShaffer/MEDIAdb/blob/master/app/assets/images/20160429_110230.jpg)
 
 ### Technologies and Tools
 This app is written in Ruby 2.2.4, Rails 4.2.6 and PostgreSQL 9.5.1
