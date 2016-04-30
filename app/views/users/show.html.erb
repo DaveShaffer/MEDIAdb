@@ -13,9 +13,26 @@
 </p>
 
 <p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<p>
+  <strong>Date of Birth:</strong>
+  <%= @user.dob %>
+</p>
+
+<%= image_tag @user.photo_url, class: 'user-photo', alt: "User Photo" %><br>
 
 <button type="button"><%= link_to 'Add New Media', new_dvd_path %></button><br>
 <button type="button"><%= link_to 'Edit User', edit_user_path(@user) %></button><br>
