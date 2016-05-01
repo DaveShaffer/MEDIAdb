@@ -1,14 +1,12 @@
 class VideosController < ApplicationController
   before_action :signed_in_user
   before_action :set_video, only: [:show, :edit, :update, :destroy]
-  # before_action :verify_correct_user, only: [:show, :edit, :update, :destroy]
 
   # GET /videos
   # GET /videos.json
   def index
     @dvd = Dvd.find(params[:dvd_id])
     @videos = Video.all
-    # @users = User.order(id: :asc)
   end # End def index
 
   # GET /videos/1
