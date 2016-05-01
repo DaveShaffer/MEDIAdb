@@ -8,7 +8,7 @@ class VideosController < ApplicationController
   def index
     @dvd = Dvd.find(params[:dvd_id])
     @videos = Video.all
-    # @videos = current_dvd.videos.all
+    # @users = User.order(id: :asc)
   end # End def index
 
   # GET /videos/1

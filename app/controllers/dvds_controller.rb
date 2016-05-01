@@ -7,7 +7,7 @@ class DvdsController < ApplicationController
   # GET /dvds
   # GET /dvds.json
   def index
-    @dvds = current_user.dvds.all
+    @dvds = current_user.dvds.order(id: :asc)
   end #End def index
 
   # GET /dvds/1

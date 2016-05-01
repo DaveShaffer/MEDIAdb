@@ -4,5 +4,6 @@ class StaticPagesController < ApplicationController
   end # End def home
 
   def about
+    @videos = Video.order(title: :asc)
   end # End def about
 end # End Class StaticPagesController
