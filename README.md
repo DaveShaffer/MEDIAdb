@@ -48,7 +48,7 @@ Heroku repo is: https://ancient-earth-36766.herokuapp.com
 The link to Trello: https://trello.com/b/x46hY0We/mediadb-ga-wdi-proj-2
 
 ### Wireframe
-![#db wireframe1](https://github.com/DaveShaffer/MEDIAdb/blob/master/app/assets/images/20160429_1047002.jpg)
+![#db wireframe1](https://github.com/DaveShaffer/MEDIAdb/blob/master/app/assets/images/20160429_104700.jpg)
 
 ![#db wireframe2](https://github.com/DaveShaffer/MEDIAdb/blob/master/app/assets/images/20160429_110230.jpg)
 
