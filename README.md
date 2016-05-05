@@ -12,12 +12,12 @@ tape contained a random mix of movies, TV shows, shorts, commercials and news
 reports.  The tapes were indexed chronologically and the contents were kept in
 a notebook.  Every time a new format is introduced, the problem gets worse.
 
-For a while I keep DVDs with movies and documentaries sorted alphabetically in
-albums.  Discs with TV shows were usually categorized by which show that disc
-had the most episodes recorded on it.  I left occaisonal gaps for new discs,
-but those quickly filled up and I was forced to resort the entire collection
-to allow room for more growth.  As the number of discs and albums grew,
-complete resorts became impractical.
+For a while I could keep DVDs with movies and documentaries sorted
+alphabetically in albums.  Discs with TV shows were usually categorized by
+which show that disc had the most episodes recorded on it.  I left occaisonal
+gaps for new discs, but those quickly filled up and I was forced to resort the
+entire collection to allow room for more growth.  As the number of discs and
+albums grew, complete resorts became impractical.
 
 The idea behind MEDIAdb is to store any type of information medium as
 compactly as possible, leave them in whatever order they are already in, give
