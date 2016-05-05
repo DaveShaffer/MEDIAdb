@@ -43,7 +43,7 @@ click "Add New File."
 ### Links
 The GitHub repo is: https://github.com/DaveShaffer/MEDIAdb
 
-Heroku repo is: https://ancient-earth-36766.herokuapp.com
+Heroku repo is: https://wdi6-proj2-mediadb.herokuapp.com
 
 The link to Trello: https://trello.com/b/x46hY0We/mediadb-ga-wdi-proj-2
 
