@@ -10,12 +10,14 @@ usually divided by subject, then alphabetical by title.  Sometimes it is
 easier to sort them by size.  It became more complex when VHS came out.  Each
 tape contained a random mix of movies, TV shows, shorts, commercials and news
 reports.  The tapes were indexed chronologically and the contents were kept in
-a notebook.
+a notebook.  Every time a new format is introduced, the problem gets worse.
 
-With the introduction of new formats, CD, DVD and Blu-Ray, the problem got
-worse.  For awhile it was possible to keep the discs in albums sorted
-alphabetically.  As the number of discs and albums grew, complete resorts
-became impractical.
+For a while I keep DVDs with movies and documentaries sorted alphabetically in
+albums.  Discs with TV shows were usually categorized by which show that disc
+had the most episodes recorded on it.  I left occaisonal gaps for new discs,
+but those quickly filled up and I was forced to resort the entire collection
+to allow room for more growth.  As the number of discs and albums grew,
+complete resorts became impractical.
 
 The idea behind MEDIAdb is to store any type of information medium as
 compactly as possible, leave them in whatever order they are already in, give
@@ -53,7 +55,11 @@ The link to Trello: https://trello.com/b/x46hY0We/mediadb-ga-wdi-proj-2
 ![#db wireframe2](https://github.com/DaveShaffer/MEDIAdb/blob/master/app/assets/images/20160429_110230.jpg)
 
 ### Technologies and Tools
-This app is written in Ruby 2.2.4, Rails 4.2.6 and PostgreSQL 9.5.1
+This app is written in Ruby 2.2.4, Rails 4.2.6 and PostgreSQL 9.5.1.  It
+incorporates authentication and authorization through a session controller
+which prevents one user from seeing or editing another users data.  This app
+also uses nested RESTful routing to control associations between database
+tables.
 
 ### Future Versions
 Future versions of MEDIAdb will have better CSS styling, more columns in the
